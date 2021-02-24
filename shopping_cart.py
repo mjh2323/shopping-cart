@@ -43,20 +43,50 @@ def to_usd(my_price):
 
 ## Information Capture
 
-total_price = 0 
+total_price = 0
+tax_total = 0
+tax_included = 0 
+identifiers = []
+
+
 
 while True:
     identifier = input("Please input a product identifier: ")
     if identifier == "DONE":
         break
     else:
-        matching_products = [p for p in products if p["id"] == int(identifier)]
-        matching_product = matching_products[0]
-        total_price = total_price + matching_product["price"]
-        print("Product Selected: " + matching_product["name"] + " " + str(matching_product["price"]))
-
+        #matching_products = [p for p in products if p["id"] == int(identifier)]
+        #matching_product = matching_products[0]
+        #total_price = total_price + matching_product["price"]
+        #print("Product Selected: " + matching_product["name"] + " " + str(matching_product["price"]))
+        identifiers.append(identifier)
 
 ## Information Display 
 
-print("Toal Price: " + str(total_price))
+
+#print(identifiers)
+print()
+print("----------------------------------------------")
+print("                MJH GROCERS")
+print("                MJH-FRESH-GROCERY.COM")
+print("----------------------------------------------")
+
+print("----------------------------------------------")
+print("CHECKOUT AT: ") #NEED DATE
+print("----------------------------------------------")
+
+
+
+for identifier in identifiers:
+    matching_products = [p for p in products if p["id"] == int(identifier)]
+    matching_product = matching_products[0]
+    total_price = total_price + matching_product["price"]
+    #print("Product Selected: " + matching_product["name"] + " " + str(matching_product["price"]))
+    tax_total = total_price * .0875
+    tax_included = total_price + tax_total
+
+print("SUBTOTAL: " + str(total_price))
+print("TAX: " + str(tax_total))
+print("TOTAL: " + str(tax_included)) 
+
 
