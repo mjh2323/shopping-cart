@@ -19,8 +19,6 @@ Pip
 cd ~/Desktop/shopping-cart
 ```
 
-3) Create new file named "shopping_cart.py"
-
 
 ## Usage
 
@@ -31,5 +29,7 @@ python shopping_cart.py
 ```
 
 When you first begin, the display will show a list of products and their given "identifiers".
+
 You must input the identifier of your choice when asked. Please only input the identifier number, no other text or spaces. 
+
 When you are finished selecting, please enter "DONE". This will allow your total to be assessed and your receipt to be printed. 
