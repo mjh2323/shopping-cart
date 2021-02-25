@@ -1,10 +1,10 @@
-# shopping-cart
+## shopping-cart
 
 Project Description: https://github.com/prof-rossetti/intro-to-python/blob/master/projects/shopping-cart/README.md
 
 
 
-# Installation 
+## Installation 
 
 1) Clone/download from GitHub: https://github.com/mjh2323/shopping-cart
 
@@ -18,7 +18,7 @@ cd shopping-cart
 
 4) Paste code in python file: 
 
-# shopping_cart.py
+#shopping_cart.py
 
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -57,11 +57,11 @@ def to_usd(my_price):
     return f"${my_price:,.2f}" #> $12,000.71
 
 
-# TODO: write some Python code here to produce the desired output
+#TODO: write some Python code here to produce the desired output
 
 #print(products)
 
-## Information Capture
+##Information Capture
 
 import datetime 
 now = datetime.datetime.now()
@@ -85,7 +85,7 @@ while True:
         #print("Product Selected: " + matching_product["name"] + " " + str(matching_product["price"]))
         identifiers.append(identifier)
 
-## Information Display 
+##Information Display 
 
 #print(identifiers)
 print( ) 
@@ -128,7 +128,7 @@ print( )
 
 
 
-# Usage
+## Usage
 
 1) Run the program in terminal: 
 
