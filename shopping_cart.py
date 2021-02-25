@@ -45,7 +45,6 @@ def to_usd(my_price):
 
 import datetime 
 now = datetime.datetime.now()
-#print(now.strftime("%m/%d/%Y %I:%M %p"))
 
 
 total_price = 0
@@ -68,13 +67,12 @@ while True:
 
 ## Information Display 
 
-
 #print(identifiers)
 print()
 print("----------------------------------------------")
 print("----------------------------------------------")
 print("                MJH GROCERS")
-print("                MJH-FRESH-GROCERY.COM")
+print("VISIT US ONLINE ---> WWW.MJH-FRESH-GROCERY.COM")
 print("----------------------------------------------")
 print("----------------------------------------------")
 
@@ -90,14 +88,17 @@ for identifier in identifiers:
     matching_products = [p for p in products if p["id"] == int(identifier)]
     matching_product = matching_products[0]
     total_price = (total_price + matching_product["price"])
-    print("... " + matching_product["name"] + " " + (str(matching_product["price"])))
+    print("... " + matching_product["name"] + " (" + (str(to_usd(matching_product["price"]))) + ") ")
     tax_total = (total_price * .0875)
     tax_included = (total_price + tax_total)
 
 print("----------------------------------------------")
-print("SUBTOTAL: " + str(total_price))
-print("TAX: " + str(tax_total))
-print("TOTAL: " + str(tax_included)) 
+print("SUBTOTAL: " + str(to_usd(total_price)))
+print("TAX: " + str(to_usd(tax_total)))
+print("TOTAL: " + str(to_usd(tax_included)))
+print("----------------------------------------------")
+print("       THANK YOU - HAVE A NICE DAY!")
+print("----------------------------------------------")
 print("----------------------------------------------")
 
 
